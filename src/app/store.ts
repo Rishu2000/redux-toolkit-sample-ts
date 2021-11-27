@@ -1,7 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit";
+import counterSliceReducer from "../features/counter/counterSlice";
 
 const store = configureStore({          //configureStore() dosen't require the typed declaration because it's been imported.
-    reducer:{}
+    reducer:{
+        counter: counterSliceReducer
+    }
 })
 
 export type RootState = ReturnType<typeof store.getState>       //export the type for the state.
