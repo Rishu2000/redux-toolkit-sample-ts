@@ -6,9 +6,9 @@ interface CounterState {
     value:number
 }
 
-const initialState: CounterState = {
-    value:0
-}
+const initialState = {
+    value:0,
+} as CounterState;
 
 export const counterSlice = createSlice({
     name:"counter",
