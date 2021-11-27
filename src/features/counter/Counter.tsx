@@ -15,8 +15,8 @@ const handleDecrementClick:React.MouseEventHandler<HTMLButtonElement> = () => {
     dispatch(decrement());
 }
 
-const handleIncByNum:React.MouseEventHandler<HTMLButtonElement> = () => {
-    dispatch(incrementByAmount(23));
+const handleIncByNum:any = (num:number) => {
+    dispatch(incrementByAmount(num));
 }
 
     return (
@@ -29,7 +29,7 @@ const handleIncByNum:React.MouseEventHandler<HTMLButtonElement> = () => {
                 onClick={handleDecrementClick}
             >Decerement</button>
             <button
-                onClick={handleIncByNum}
+                onClick={() => handleIncByNum(100)}
             >Incerement By 23</button>
         </div>
     )
