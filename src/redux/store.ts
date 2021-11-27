@@ -4,6 +4,6 @@ const store = configureStore({          //configureStore() dosen't require the t
     reducer:{}
 })
 
-export type RootState = ReturnType<typeof store.getState>       
+export type RootState = ReturnType<typeof store.getState>       //export the type for the state.
 
-export type AppDispatch = typeof store.dispatch     
+export type AppDispatch = typeof store.dispatch     //export the type for the dispatch.
