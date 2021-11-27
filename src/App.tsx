@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Counter from './features/counter/Counter';
+import Books from './components/Books';
+import Counter from './components/Counter';
 
 function App() {
   return (
     <div className="App" style={{marginTop:30}}>
       <Counter/>
+      <Books/>
     </div>
   );
 }

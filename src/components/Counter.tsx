@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { decrement, increment, incrementByAmount } from './counterSlice';
+import { useAppDispatch, useAppSelector } from '../app/hooks'
+import { decrement, increment, incrementByAmount } from '../features/counter/counterSlice';
 
 const Counter: React.FC = () => {
 
 const count = useAppSelector((state) => state.counter.value);
 const dispatch = useAppDispatch();
 const [val, setVal] = useState('');
-
-const newNum = +val;
 
     return (
         <div>
@@ -21,7 +19,7 @@ const newNum = +val;
             >Decerement</button>
             <input type="number" placeholder="Increment by Number" onChange={(e) => setVal(e.target.value)}/>
             <button
-                onClick={() => dispatch(incrementByAmount(newNum))}
+                onClick={() => dispatch(incrementByAmount(+val))}
             >Incerement By Number</button>
         </div>
     )
