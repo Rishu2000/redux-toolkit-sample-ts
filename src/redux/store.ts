@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 
-const store = configureStore({          
+const store = configureStore({          //configureStore() dosen't require the typed declaration because it's been imported.
     reducer:{}
 })
 
