@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 import counterSliceReducer from "../features/counter/counterSlice";
+import bookSliceReducer from "../features/counter/bookSlice";
 
 export const store = configureStore({          //configureStore() dosen't require the typed declaration because it's been imported.
     reducer:{
-        counter: counterSliceReducer
+        counter: counterSliceReducer,
+        books: bookSliceReducer
     }
 })
 
