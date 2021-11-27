@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit";
 import counterSliceReducer from "../features/counter/counterSlice";
 
-const store = configureStore({          //configureStore() dosen't require the typed declaration because it's been imported.
+export const store = configureStore({          //configureStore() dosen't require the typed declaration because it's been imported.
     reducer:{
         counter: counterSliceReducer
     }
