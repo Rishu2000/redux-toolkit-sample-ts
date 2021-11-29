@@ -19,35 +19,40 @@ const book:bookType = {
 
     return (
         <div>
-        <div className="m-5 d-flex justify-content-between flex-wrap">
+        <div className="m-5 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4">      {/**flex justify-between flex-wrap */}
             {books.map((book, key) => (
-                <div key={key} className="alert alert-info mx-5" style={{width:"300px"}}>
-                        <h2>{book.title}</h2>
-                        <p>{book.disc}</p>
-                        <h3>Price: {book.price}</h3>
+                <div className="flex justify-center">
+                    <div key={key} className="border border-gray-300 py-3 px-2 rounded-lg bg-yellow-100" style={{width:"300px"}}>
+                            <h2 className="text-3xl font-semibold">{book.title}</h2>
+                            <div>{book.disc}</div>
+                            <h3 className="text-2xl font-semibold">Price: {book.price}</h3>
+                    </div>
                 </div>
             ))}
         </div>
         <div>
             <form className="mx-5"> 
-                <div className="d-flex">
-                    <input className="form-control mx-3" type="text" 
+                <div className="flex">
+                    <input className="flex-none focus:border-light-blue-200 focus:outline-none focus:ring-1 p-2 px-4 rounded border border-gray-300 mx-3" 
+                        type="text" 
                         onChange={(e) => setTitleState(e.target.value)}
                         placeholder="Title"/>
-                    <input className="form-control mx-3" type="text" 
+                    <input className="flex-1 focus:border-light-blue-200 focus:outline-none focus:ring-1 p-2 px-4 rounded border border-gray-300 mx-3" 
+                        type="text" 
                         onChange={(e) => setDiscState(e.target.value)}
                         placeholder="Description"/>
-                    <input className="form-control mx-3" type="text" 
+                    <input className="flex-none focus:border-light-blue-200 focus:outline-none focus:ring-1 p-2 px-4 rounded border border-gray-300 mx-3" 
+                        type="text" 
                         onChange={(e) => setPriceState(e.target.value)}
                         placeholder="Price"/>
                 </div>
-                <button className="btn btn-primary m-3"
+                <button className="bg-green-600 p-2 px-10 text-white font-semibold rounded m-3"
                     onClick={(e) => {
                         e.preventDefault();
                         dispatch(addBook(book))
                     }}
                 >Add</button>
-                <button className="btn btn-danger m-3"
+                <button className="bg-red-600 p-2 px-10 text-white font-semibold rounded m-3"
                     onClick={(e) => {
                         e.preventDefault();
                         dispatch(removeBook(book))

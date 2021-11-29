@@ -10,19 +10,23 @@ const [val, setVal] = useState('');
 
     return (
         <div>
-            <h2>Count is: {count}</h2>
-            <div className="d-flex justify-content-center align-items-center">
+            <h2 className="text-3xl font-bold">Count is: {count}</h2>
+            <div className="flex justify-center items-center">
+            {/* <button className="w-1/2 flex items-center justify-center rounded-md bg-black text-white" type="submit">Buy now</button> */}
             <button
-                className="btn btn-primary m-2"
+                className="bg-green-500 text-white p-2 rounded m-2 px-4"
                 onClick={() => dispatch(increment())}
             >Increment</button>
             <button
-                className="btn btn-primary m-2"
+                className="bg-red-500 text-white p-2 rounded m-2 px-4"
                 onClick={() => dispatch(decrement())}
             >Decerement</button>
-            <input className="form-control" style={{height:"100%", width:"200px"}} type="number" placeholder="Increment by Number" onChange={(e) => setVal(e.target.value)}/>
+            <input className="focus:border-light-blue-500 focus:outline-none focus:ring-1 p-2 rounded border border-gray-300 px-4" 
+                style={{height:"100%", width:"200px"}} 
+                type="number" placeholder="Increment by Number" 
+                onChange={(e) => setVal(e.target.value)}/>
             <button
-                className="btn btn-primary m-2"
+                className="bg-green-500 text-white p-2 rounded m-2 px-4"
                 onClick={() => dispatch(incrementByAmount(+val))}
             >Incerement By Number</button>
             </div>

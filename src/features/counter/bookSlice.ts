@@ -14,15 +14,15 @@ const initialState: initialStateType = {
     books:[
         {
             title:"Core Java",
-            disc:"erthrgefedfbgbgergnfrgegrngfhnrgefwefgngef",
+            disc:"Wikipedia (/ˌwɪkɪˈpiːdiə/ (About this soundlisten) wik-ih-PEE-dee-ə or /ˌwɪki-/ (About this soundlisten) wik-ee-) is a free content, multilingual online encyclopedia written and maintained by a community of volunteers through a model of open collaboration, using a wiki-based editing system.",
             price:300
         },{
             title:"Core Java 2",
-            disc:"erthrgefedfbgbgergnfrgegrngfhnrgefwefgngef",
+            disc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique quia corrupti fuga aliquam placeat! Sint, quaerat! Qui vitae distinctio sed aliquam est cumque asperiores nemo quasi, odio tenetur saepe in.",
             price:400
         },{
             title:"Core Java 3",
-            disc:"erthrgefedfbgbgergnfrgegrngfhnrgefwefgngef",
+            disc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique quia corrupti fuga aliquam placeat! Sint, quaerat! Qui vitae distinctio sed aliquam est cumque asperiores nemo quasi, odio tenetur saepe in.",
             price:500
         }
     ]
